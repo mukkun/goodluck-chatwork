@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "name": "goodluck-chatwork",
+  "version": "0.0.1",
+  "permissions": [
+    "notifications"
+  ],
+  "icons": {
+    "16": "imgs/icon.png"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": ["https://www.chatwork.com/*"],
+    "js": ["libs/jquery-3.6.0-slim.min.js", "content.js"]
+  }],
+  "browser_action": {
+    "default_icon": "imgs/icon.png",
+    "default_title": "GLCW"
+  }
+}
